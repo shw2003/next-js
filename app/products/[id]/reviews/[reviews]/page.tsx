@@ -4,6 +4,9 @@ import React from "react";
 import { usePathname, notFound } from "next/navigation";
 import { Metadata } from "next";
 
+function gatrandom(count: number) {
+  return Math.floor(Math.random() * count);
+}
 // export const generateMetadata = ({ params }: Props): Metadata => {
 //   // const title = await new Promise
 //   return {
@@ -28,6 +31,10 @@ function ReviewsPageOfProduct({ params }) {
 
   // Extract the id from the pathname
   // const id = extractIdFromPathname();
+  // const random = gatrandom(2);
+  // if (random === 1) {
+  //   throw new Error("Error loading review");
+  // }
 
   console.log(params);
   if (parseInt(params.reviews) > 1000) {
